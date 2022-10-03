@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "./components/Header/Header";
+import NavBar from "./components/NavBar/NavBar";
 // function miFuncon () {
 //   return null;
 // }
@@ -9,9 +11,8 @@ import React from "react";
 const App = () => {
   return (
   <>
-  <header>
-  <h1 className ="rojo">header</h1>
-  </header>
+    <Header />
+    <NavBar />
   </>
   );
 }
