@@ -1,26 +1,18 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import NavBar from "./components/NavBar/NavBar";
-// function miFuncon () {
-//   return null;
-// }
-// const miFuncionFlecha = () =>{
-//   return null;
-// }
+import NavBar from "./components/NavBar/Navbar";
+import Items from "./components/ItemListContainer/IntemListContainer";
 
 const App = () => {
   return (
   <>
     <Header />
     <NavBar />
+    <Items />
+
   </>
   );
 }
 
 export default App
 
-// {/* <p> Hola Mundo </p>
-
-// const nodoPadre = document.getElementById("padre")
-// const p = document.createElement("p")
-// p.innerHTML = "Hola Mundo" */}

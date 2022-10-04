@@ -1,18 +1,18 @@
-import React from "react"
-import CartWidget from "../CartWidget/CartWidget"
-import './NavBar.css'
+import React from "react";
+import './Navbar.css';
+import CartWidget from "../CartWidget/CartWidget";
 
-const NavBar = () => {
+const Navbar = () => {
     return 
     <>
-    <div>
+    <nav>
         <button>New inn</button>
         <button>Casual wear</button>
         <button>Sport wear</button>
         <button>Under wear</button>
-    </div>
+    </nav>
     <CartWidget/>
     </>
 }
 
-export default NavBar
+export default Navbar

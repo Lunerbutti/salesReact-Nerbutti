@@ -1,11 +1,9 @@
 import React from "react"
-import './/CartWidget.css'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidget = () => {
     return (
-        <div>
-
-        </div>
+        <ShoppingCartIcon color="success" fontSize="large"/>
     )
 }
 

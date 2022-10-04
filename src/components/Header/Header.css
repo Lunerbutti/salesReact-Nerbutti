@@ -1,0 +1,15 @@
+header{
+display: flex;
+background-image: src='./img/fondoHeader.jpg';
+}
+.logo {
+width: 75px;
+height: 75px;
+}
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(31, 2, 2);
+    margin-left: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
