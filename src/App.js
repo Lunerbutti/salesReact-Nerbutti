@@ -5,12 +5,12 @@ import Items from "./components/ItemListContainer/IntemListContainer";
 
 const App = () => {
   return (
-  <>
+  <div>
     <Header />
     <NavBar />
     <Items />
 
-  </>
+  </div>
   );
 }
 

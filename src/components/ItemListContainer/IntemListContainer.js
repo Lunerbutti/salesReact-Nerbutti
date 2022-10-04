@@ -2,7 +2,9 @@ import { color } from "@mui/system";
 import React from "react";
 
 const Items = () => {
-    <h2 style={style.textItems}>Wellcome, Heredero´s sale page is coming soon </h2>
+    return (
+    <h2 style={style.textItems}>Wellcome, Heredero sale page will be available soon </h2>
+    );
 }
 
 export default Items

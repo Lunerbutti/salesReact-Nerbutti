@@ -11,7 +11,7 @@ const Header = () =>{
          <img className="logo" src={logoH} alt="Logo Heredero" />   
          <h1>HEREDERO</h1>
         </header>
-        <Navbar/>
+        
       </>)
 }
 
