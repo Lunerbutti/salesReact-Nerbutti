@@ -7,7 +7,8 @@ const Navbar = () => {
     <div className="navbarStyle">
     <nav>
         <button>New in</button>
-        <button>Casual wear</button>
+        <button class= "nav-item dropdown nav-link dropdown-toggle">Casual wear
+        </button>
         <button>Sport wear</button>
         <button>Under wear</button>
         <button>About Us</button>

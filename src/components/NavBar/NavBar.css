@@ -2,4 +2,8 @@
     display: flex;
     margin-left: 15px;
     align-items: center;
+    justify-content: space-between;
+}
+CartWidget{
+    margin-left: 30px;
 }
