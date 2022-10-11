@@ -4,6 +4,7 @@ import CartWidget from "../CartWidget/CartWidget";
 
 const Navbar = () => {
     return (
+    <>
     <div className="navbarStyle">
     <nav>
         <button>New in</button>
@@ -15,6 +16,7 @@ const Navbar = () => {
     </nav>
     <CartWidget/>
     </div>
+    </>
 );}
 
 export default Navbar;

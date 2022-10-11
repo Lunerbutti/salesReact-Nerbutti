@@ -1,10 +1,11 @@
 import React from "react";
 
 const Items = () => {
+    const greeting = "Wellcome, Heredero sale page will be soon";
     return (
-    <div style={style.textItems}>    
-    <h2 >Wellcome, Heredero sale page will be soon </h2>
-    </div>);
+    <body style={style.textItems}>    
+    <Items message={greeting} style={style.showMessage} />
+    </body>);
 }
 
 export default Items
@@ -15,7 +16,9 @@ const style = {
         padding: 0,
         height: 300,
         backgroundColor: 'rgba(252, 255, 176, 0.974)',
-        color: 'blue',
-        fontSize: 22,
+    },
+    showMessage: {
+        color: "black",
+        fontSize: 23,
     }
 }
