@@ -1,11 +1,11 @@
 import React from "react";
 
-const Items = () => {
-    const greeting = "Wellcome, Heredero sale page will be soon";
+const Items = (props) => {
+    console.log(props)
     return (
-    <body style={style.textItems}>    
-    <Items message={greeting} style={style.showMessage} />
-    </body>);
+    <div style={style.textItems}>   
+    <h2 style={style.showMessage}>{props.textInfo}</h2>
+    </div>);
 }
 
 export default Items
