@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from "../ItemDetail/ItemDetail"
+import ItemList from "../ItemList/ItemList";
 import { useParams, } from "react-router-dom";
 import { getDoc, doc } from 'firebase/firestore';
 
@@ -31,7 +32,7 @@ const Items = () => {
 
         <>
         {        
-        item ? <ItemDetail item={item} setItem={setItem}/> : <h1>Cargando...</h1>
+        item ? <ItemDetail item={item} setItem={setItem}/> : <h3>Cargando...</h3>
         }
         </>
     )
