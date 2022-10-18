@@ -11,7 +11,7 @@ const Navbar = () => {
         <button class= "nav-item dropdown nav-link dropdown-toggle">Casual wear
         </button>
         <button>Sport wear</button>
-        <button>Under wear</button>
+        <button>Underwear</button>
         <button>About Us</button>
     </nav>
     <CartWidget/>

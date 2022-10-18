@@ -1,24 +1,44 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+// import Count from "../ItemCount/ItemCount";
+import ItemList from "../ItemList/ItemList";
+    
+    // const onAdd = (shop) =>{
+    // console.log(`user shop ${shop} product`);
+    // };
 
-const Items = (props) => {
-    console.log(props)
-    return (
-    <div style={style.textItems}>   
-    <h2 style={style.showMessage}>{props.textInfo}</h2>
-    </div>);
-}
+    // const obtenerProductos = new Promise((resolve, reject)=>{
+    //     setTimeout(() => {resolve(productos);},2000);
+    // })
 
-export default Items
+    const Items = () => {
 
-const style = {
-    textItems: {
-        margin: 0,
-        padding: 0,
-        height: 300,
-        backgroundColor: 'rgba(252, 255, 176, 0.974)',
-    },
-    showMessage: {
-        color: "black",
-        fontSize: 23,
-    }
-}
+        const [productos, setProductos] = useState([]);
+      
+        // const { categoria } = useParams();
+      
+      
+        // const getData = async (categoria) => {
+        //   try {        
+        //   const document = categoria? query(collection(db, "Items"),where("categoria", "==", categoria)) : collection(db, "Items")
+        //   const col = await getDocs(document)
+        //   const result = col.docs.map((doc) => doc ={id:doc.id,...doc.data()})
+        //   setProductos(result)
+        // } catch (error) {
+        //     console.log(error)
+        // }
+        // }
+      
+        // useEffect(() => {
+        //   getData(categoria) 
+        // }, [categoria]);
+      
+        return (
+          <>
+            {
+            productos.length ? <ItemList productos={productos} /> : <h1>Cargando...</h1>  
+            }
+          </>
+        );
+      };
+      export default Items
+      
