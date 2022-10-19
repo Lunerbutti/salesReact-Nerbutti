@@ -7,12 +7,12 @@ const Navbar = () => {
     <>
     <div className="navbarStyle">
     <nav>
-        <button>New in</button>
-        <button class= "nav-item dropdown nav-link dropdown-toggle">Casual wear
+        <button class="btn">New in</button>
+        <button class="btn" >Casual wear
         </button>
-        <button>Sport wear</button>
-        <button>Underwear</button>
-        <button>About Us</button>
+        <button class="btn">Sport wear</button>
+        <button class="btn">Underwear</button>
+        <button class="btn">About Us</button>
     </nav>
     <CartWidget/>
     </div>

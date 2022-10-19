@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./ItemDetail.css";
-import { products } from "../../mock/products";
+import { Productos } from "../../mock/Products";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
