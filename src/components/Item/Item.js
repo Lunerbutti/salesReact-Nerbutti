@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import './Item.css';
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 const Item = ({ producto }) => {
     // const { nombre, img, precio, id } = producto;
@@ -16,7 +17,7 @@ const Item = ({ producto }) => {
             <img className="img" src={producto.img} alt={producto.nombre} />
           </div>
           <p className="card-text">Precio: ${producto.precio} </p>
-          <Link to={`/detalles/${producto.id}`}>
+          <Link to={`/producto/${producto.id}`}>
             <button className="btn btn-outline-secondary">Ver detalles</button>
           </Link>
         </div>

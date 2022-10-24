@@ -1,7 +1,8 @@
 import React from "react";
 import './Navbar.css';
 import CartWidget from "../CartWidget/CartWidget";
-import {link, navlink} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
+
 
 const Navbar = ({children}) => {
     const categorias =[
@@ -15,14 +16,19 @@ const Navbar = ({children}) => {
     <>
     <div className="navbarStyle">
     <nav>
-        <button class="btn">New in</button>
+        {
+            categorias.map((categorias)=>{
+                return<Link key={categorias.id} to={categorias.ruta} class="btn">{categorias.nombre}</Link>
+            })
+        }
+        {/* <button class="btn">New in</button>
         <button class="btn" >Casual wear
         </button>
         <button class="btn">Sport wear</button>
         <button class="btn">Underwear</button>
-        <button class="btn">About Us</button>
+        <button class="btn">About Us</button> */}
     </nav>
-    <CartWidget/>
+    <Link to="/cart"><CartWidget/></Link> 
     </div>
     </>
 );}
