@@ -1,77 +1,20 @@
-import React, {useState} from "react";
+import React from "react";
 import "./ItemDetail.css";
-import { Productos } from "../../mock/Products";
+// import { Productos } from "../../mock/Products";
 import ItemCount from "../ItemCount/ItemCount";
-import { Link } from "react-router-dom";
 
-const ItemDetail = ({ item, setItem }) => {
+const ItemDetail = ({ listaProducto, onAdd }) => {
 
-const [goToCart, setGoToCart] = useState(false)
-
-
-  const onAdd = (quantity) => {
-
-    setGoToCart(true);
-    addItem(item, quantity);
-    item.stock = item.stock - quantity; 
-
-    console.log(quantity)
-
-  };
-
-const [cantidad, setCantidad] = useState(0);
-
-const agregarAlCarrito = (item, cantidad) => {
-  const productoCarrito = {id: item.id, cantidad: cantidad}
-  console.log(productoCarrito)
-} 
+    console.log(listaProducto)
 
   return (
-    <>
-    <article className="card text-white bg-dark mb-3">
-      <h1>{item.nombre}</h1>
-      <div className="card-detail">
-        <div className="card-detail-left">
-          <img src={item.img} alt={item.nombre} className="img" />
-        </div>
-        <div className="card-detail-right">
-          <p>{item.descripcion}</p>
-          <p className="price">${item.precio}</p>
-          <p>Stock: {item.stock}</p>
-          
-          <div className="d-grid gap-2">
-                    {goToCart ? (
-                      <Link
-                        to="/cart"
-                        className="btn btn-lg btn-dark mt-2 "
-                        type="button"
-                      >
-                        Finalizar compra
-                      </Link>
-                      
-                    ) : (
-                      <ItemCount
-                        className="mt-5 p-5"
-                        stock={item.stock}
-                        onAdd={onAdd}
-                      />
-                    )}
-                    <Link
-                        to="/"
-                        className="btn btn-lg btn-dark mt-2 "
-                        type="button"
-                      >
-                       Seguir Comprando
-                      </Link>
-                  </div>   
-
-          <div>
-          </div>
-        </div>
-        
-      </div>
-    </article>
-    </>
+    <div className="vistaProducto">
+    <img className="imgProducto" alt= {listaProducto.titulo} src= {listaProducto.img}/>
+       <h1 className="nombreProducto">{listaProducto.nombre}</h1>
+       <span className="descripcionProducto">{listaProducto.descripcion}</span>
+       <h2 className="precioProducto">{listaProducto.Precio}</h2>
+       <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+    </div>
   );
 };
 

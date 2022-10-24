@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { ItemList } from "../ItemList/ItemList";
 // import { Productos } from "../../mock/Products";
-
+// import Items from "../ItemDetailContainer/ItemDetailContainer";
 import { useParams } from "react-router-dom";
     
 const productos = [
@@ -94,8 +94,7 @@ const productos = [
     setTimeout(() => {resolve (productos);}, 2000);
   });
 
-    const ItemListContainer = () => {
-
+    function ItemListContainer () {
     const { id } = useParams();
       console.log(id);  
     const [data, setData] = useState([]);

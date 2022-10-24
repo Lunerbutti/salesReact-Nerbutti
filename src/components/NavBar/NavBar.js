@@ -1,8 +1,16 @@
 import React from "react";
 import './Navbar.css';
 import CartWidget from "../CartWidget/CartWidget";
+import {link, navlink} from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({children}) => {
+    const categorias =[
+    {nombre:"Casual wear", id : 0, ruta: "/categoria/Casual wear"},
+    {nombre:"Sport wear", id: 1, ruta :"/categoria/Sport wear"},
+    {nombre:"Underwear", id: 2, ruta:"/categoria/Underwear"},
+    {nombre:"About Us", id: 3, ruta: "/categoria/About Us"},
+    ]
+
     return (
     <>
     <div className="navbarStyle">
