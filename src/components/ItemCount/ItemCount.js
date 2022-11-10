@@ -22,7 +22,7 @@ const ItemCount = ({ stock, onAdd }) => {
   }
 
   function reset() {
-    setCount(0);
+    setCount(1);
   }
 
   return (

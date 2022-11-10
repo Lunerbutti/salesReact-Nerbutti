@@ -8,7 +8,7 @@ const productosVenta = [
 
     {
         id: 1,
-        nombre: "Delux",
+        nombre: "Safety",
         marca: "Nike",
         precio: 10000,
         stock: 5,
@@ -19,7 +19,7 @@ const productosVenta = [
     },
     {
         id: 2,
-        nombre: "Pegasus",
+        nombre: "Fireone",
         marca: "Nike",
         precio: 15000,
         stock: 7,
@@ -60,7 +60,7 @@ const productosVenta = [
     },
     {
         id: 6,
-        nombre: "night",
+        nombre: "Night",
         marca: "H",
         precio: 15000,
         stock: 9,
@@ -80,12 +80,12 @@ const productosVenta = [
     },
     {
         id: 8,
-        nombre: "boxer",
+        nombre: "Boxer",
         marca: "H",
         precio: 8000,
         stock: 3,
         categoria: "Underwear",
-        descripcion: "boxer for men",
+        descripcion: "boxer for men, pack for 3 colors",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7nHk89pmAQXat8FUH_GQbX3SHq6cOWp8N-A&usqp=CAU"
     },
     ]
@@ -107,7 +107,8 @@ const Items = () => {
             return producto.id === parseInt (id)
         })))
         
-    },[id])
+    },[id]);
+ 
     
     console.log(listaProducto);
   

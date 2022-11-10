@@ -8,23 +8,23 @@ const productos = [
 
   {
       id: 1,
-      nombre: "Delux",
+      nombre: "Safety",
       marca: "Nike",
       precio: 10000,
       stock: 5,
       categoria: "Sport wear",
-      descripcion: "Delux sigue siendo nuestra zapatilla más probada. Todavía diseñado para mantenerte en marcha. El Nike React Infinity Run 3 te brinda una sensación suave y estable para una experiencia de carrera fluida tanto en carreras largas como cortas.",
+      descripcion: "Safety sigue siendo nuestra zapatilla más probada. Todavía diseñado para mantenerte en marcha. El Nike React Infinity Run 3 te brinda una sensación suave y estable para una experiencia de carrera fluida tanto en carreras largas como cortas.",
       img: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/32da54aa-4131-4107-80dc-0df49ff127e2/air-zoom-pegasus-38-hardloopschoen-heren-5HVSDm.png"
 
   },
   {
       id: 2,
-      nombre: "Pegasus",
+      nombre: "Fireone",
       marca: "Nike",
       precio: 15000,
       stock: 7,
       categoria: "Sport wear",
-      descripcion: "Las Nike Pegasus Trail 3 ofrecen una gran comodidad, con un diseño que combina con el aspecto clásico de Pegasus. Nike React foam zorgt para amortiguación sensible.",
+      descripcion: "Las Nike Fireone Trail 3 ofrecen una gran comodidad, con un diseño que combina con el aspecto clásico de Pegasus. Nike React foam zorgt para amortiguación sensible.",
       img: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f1422d49-453d-4bc3-9cab-357516d08d81/pegasus-trail-3-trailrunningschoen-heren-sgKPTr.png"
 
   },
@@ -60,7 +60,7 @@ const productos = [
   },
   {
       id: 6,
-      nombre: "night",
+      nombre: "Night",
       marca: "H",
       precio: 15000,
       stock: 9,
@@ -80,12 +80,12 @@ const productos = [
   },
   {
       id: 8,
-      nombre: "boxer",
+      nombre: "Boxer",
       marca: "H",
       precio: 8000,
       stock: 3,
       categoria: "Underwear",
-      descripcion: "boxer for men",
+      descripcion: "boxer for men, pack for 3 colors",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7nHk89pmAQXat8FUH_GQbX3SHq6cOWp8N-A&usqp=CAU"
   },
   ]

@@ -1,17 +1,22 @@
 .vistaProducto {
     border: solid ;
     border-color: darkslategrey;
+    display: flex;
+    justify-content: space-around;
  }
  
  
  .imgProducto{
-     display: block;
+     display: flex;
+     position: relative;
+     height: 600px;
+     width: 500px;
      
  }
  
  .nombreProducto{
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-size: xx-large;
+     font-size: x-large;
      font-weight: bolder;
      color: rgb(2, 2, 2);
      text-align: center;
@@ -20,7 +25,7 @@
  
  .descripcionProducto{
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-size: xx-large;
+     font-size: large;
      font-weight: bolder;
      color: rgb(2, 2, 2);
      text-align: center;
@@ -34,5 +39,11 @@
      color: rgb(2, 2, 2);
      text-align: center;
      display: block;
+ }
+
+ .buttonShop{
+    display: block;
+    position: relative;
+    margin-left: 35%;
  }
  
