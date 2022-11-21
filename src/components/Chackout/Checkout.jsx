@@ -1,8 +1,8 @@
-// import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import { useCartContext } from "../Context/CartContesxt";
-// import db from "../../services/firebase";
+import { db } from "../Firebase/Firebase";
 import { useNavigate } from "react-router-dom";
 // import "./Checkout.css";
 
@@ -20,17 +20,17 @@ const Checkout = () => {
 
   const navigate = useNavigate();
 
-//   const generateOrder = async (data) => {
-//     try {
-//       const col = collection(db, "Orders");
-//       const order = await addDoc(col, data);
-//       console.log("OrderNro:", order);
-//       setOrderId(order.id);
-//       clear();
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
+  const generateOrder = async (data) => {
+    try {
+      const col = collection(db, "Orders");
+      const order = await addDoc(col, data);
+      console.log("OrderNro:", order);
+      setOrderId(order.id);
+      clear();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleInputChange = (e) => {
     setBuyer({
@@ -48,7 +48,7 @@ const Checkout = () => {
     const total = totalPrice();
     const data = { buyer, items, dia, total };
     console.log("data", data);
-    // generateOrder(data);
+    generateOrder(data);
   };
 
   const handleClear = () => {
