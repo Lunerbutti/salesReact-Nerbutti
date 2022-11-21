@@ -1,57 +1,57 @@
-import React, {createContext, useState} from "react";
-import { useEffect } from "react";
+import React, { useState, useContext } from "react";
 
+const CartContext = React.createContext([]);
 
+export const useCartContext = () => useContext(CartContext);
 
-export const  Context = createContext();
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
-console.log(Context); //{provider}
+  const addItem = (item, quantity) => {
+    if (isInCart(item.id)) {
+      setCart(
+        cart.map((product) => {
+          return product.id === item.id
+            ? { ...product, quantity: product.quantity + quantity }
+            : product;
+        })
+      );
+    } else {
+      setCart([...cart, { ...item, quantity }]); //Si no está el item lo agrego y le sumo el campo quantity
+    }
+  };
 
-export const CartContext = ({children}) =>{
-    const [updateCart, setUpdateCart] = useState([]);
-    const [q, setQ] = useState(5);
-    const [totAm, setTotAm] = useState(0);
+  const clear = () => setCart([]);
 
-    useEffect(() => {
-        const cantP = 0;
-        const montoTot = 0;
-        updateCart.forEach(item => {
-            cantP += item.cantidad;
-            montoTot += ( item.cantidad * item.precio)
+  const isInCart = (id) =>
+    cart.find((product) => product.id === id) ? true : false;
 
-        });
-        setQ(cantP)
-        setTotAm(montoTot)
-    }, [updateCart]);
+  const removeItem = (id) =>
+    setCart(cart.filter((product) => product.id !== id));
 
-    const addItems = (item, cantidad, id) =>{
-        console.log(item);
-        console.log(`Agrega ${cantidad} de producto ${item} al carrito`);
-        setUpdateCart(updateCart.filter(item => item.id === id),
-            
-        );
+  const totalProducts = () =>
+    cart.reduce((collector, product) => collector + product.quantity, 0);
 
-    };
+  const totalPrice = () => {
+    return cart.reduce((prev, act) => prev + act.quantity * act.precio, 0);
+  };
 
-    const deleteItems = (id) =>{
-        console.log("Elimina producto del carrito");
-        setUpdateCart(updateCart.filter(item => item.id !== id),);
+  console.log(cart);
 
-    };
+  return (
+    <CartContext.Provider
+      value={{
+        addItem,
+        clear,
+        isInCart,
+        removeItem,
+        totalProducts,
+        totalPrice,
 
-    const clearItems = () =>{
-        console.log("Vacia el carrito")
-        setUpdateCart ([]);
-        setQ(0);
-        setTotAm(0);
-    };
-
-    const isInCart = (id) => updateCart.some(item => item.id === id);
-
-    return (
-        <Context.Provider value={{updateCart, q, totAm, clearItems, deleteItems, addItems }}>
-        {children}
-        </Context.Provider>
-
-    )
+        cart,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 };

@@ -1,20 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./ItemDetail.css";
 // import { Productos } from "../../mock/Products";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-import { CartContext, Context } from "../Context/CartContesxt";
+import { useCartContext } from "../Context/CartContesxt";
+import Item from "../Item/Item";
 
-const ItemDetail = ({ listaProducto}) => {
+const ItemDetail = ({ listaProducto, setListaProducto}) => {
 
     console.log(listaProducto)
   const [showCount, setShowCount] = useState(true);
-  const result = useContext(Context)
+  const {addItem} = useCartContext()
 
-  const onAdd = (count) => {
-    result.addItems(listaProducto, count)
-
+  const onAdd = (quantity) => {
     setShowCount(false);
+    addItem(listaProducto, quantity);
+
+    listaProducto.stock = listaProducto.stock  - quantity;
   };
 
 
@@ -23,15 +25,20 @@ const ItemDetail = ({ listaProducto}) => {
        <img className="imgProducto" alt= {listaProducto.titulo} src= {listaProducto.img}/>
        <div>
        <h1 className="nombreProducto">{listaProducto.nombre}</h1>
+       <br/>
+       <br/>
        <span className="descripcionProducto">{listaProducto.descripcion}</span>
-       <h2 className="precioProducto">{listaProducto.Precio}</h2>
+       <h2 className="precioProducto">$ {listaProducto.precio}</h2>
+       <p className="descripcionProducto">Stock: {listaProducto.stock}</p>
+       
        {showCount ? (
-       <ItemCount stock={listaProducto.stock} initial={1} onAdd={onAdd}/>) : (
-       <Link to={'/cart'}>
-        <button className="btn btn-success buttonShop">Shop Now</button>
+       <ItemCount stock={listaProducto.stock} onAdd={onAdd}/>) : (
+       <Link to={"/cart"}>
+        <button className="btn btn-lg btn-warning">Shop Now</button>
        </Link>
        
        )} 
+       <Link to="/" className="btn btn-lg btn-outline-success descripcionProducto">Shopping</Link>
        </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Items from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import { EventComponent } from "./components/EventCntainer/EventContainer";
 import { Users } from "./components/UserInformation/UserAdd";
-import { CartContext } from "./components/Context/CartContesxt";
+import { CartProvider } from "./components/Context/CartContesxt";
 import ItemCount from "./components/ItemCount/ItemCount";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
   const informationPage = "Wellcome to Heredero, it will be available soon";
 
   return (
-<CartContext>
+<CartProvider>
   <BrowserRouter>
     <Header>
       <ItemCount/>
@@ -30,7 +30,7 @@ const App = () => {
       <Route path="/producto/:id" element={<Items />}/>
     </Routes>
   </BrowserRouter>
-</CartContext>
+</CartProvider>
 
   );
 }
