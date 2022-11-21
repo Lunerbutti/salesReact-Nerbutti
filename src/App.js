@@ -9,6 +9,7 @@ import { EventComponent } from "./components/EventCntainer/EventContainer";
 import { Users } from "./components/UserInformation/UserAdd";
 import { CartProvider } from "./components/Context/CartContesxt";
 import ItemCount from "./components/ItemCount/ItemCount";
+import Checkout from "./components/Chackout/Checkout";
 
 const App = () => {
 
@@ -20,7 +21,7 @@ const App = () => {
     <Header>
       <ItemCount/>
     </Header>
-    <Users/>
+    {/* <Users/> */}
     {/* <EventComponent/> */}
     <Routes>
       <Route path="/" element={<ItemListContainer />}/>
@@ -28,6 +29,8 @@ const App = () => {
     {/* <ItemListContainer textInfo={informationPage}/> */}
       <Route path="/cart" element={<Cart />}/> 
       <Route path="/producto/:id" element={<Items />}/>
+      <Route path="/checkout" element={<Checkout />}/>
+
     </Routes>
   </BrowserRouter>
 </CartProvider>
