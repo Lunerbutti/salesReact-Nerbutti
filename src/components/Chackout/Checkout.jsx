@@ -121,7 +121,7 @@ const Checkout = () => {
       ) : (
         <div>
           <h1>Compra Finalizada</h1>
-          <hr />
+          <br />
           <br />
           <h4>Su orden de compra es: {orderId} </h4>
           <h4> Gracias por confiar en nosotros ;D </h4>

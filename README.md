@@ -1,3 +1,28 @@
+##Proyecto de Pagina de Ventas realizado con React.js
+
+A lo largo del cursado de fullstack se hizo el desarrollo de la misma app de ventas de ropa con el progreso de los conocimientos adquiridos:
+* ```El primer desarrollo se realizó utilizando solo HTML y CSS```
+* ```El segundo desarrollo de la app fue utilizando Javascript```
+* ```El tercer desarrollo de la app se realiza con los conocimientos de React.js e incorporando los conocimientos anteriores para su mejora```
+
+***Links útiles***
+* Github [Repositorio](https://github.com/Lunerbutti/salesReact-Nerbutti/tree/master)
+* Linkedin [Lucas Nerbutti](https://www.linkedin.com/in/lucasnerbutti/)
+
+
+Autor: ```Lucas Nerbutti```
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
