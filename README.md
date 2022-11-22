@@ -8,6 +8,8 @@ A lo largo del cursado de fullstack se hizo el desarrollo de la misma app de ven
 ***Links útiles***
 * Github [Repositorio](https://github.com/Lunerbutti/salesReact-Nerbutti/tree/master)
 * Linkedin [Lucas Nerbutti](https://www.linkedin.com/in/lucasnerbutti/)
+* Deeploy [page](https://glowing-peony-7daac5.netlify.app/)
+
 
 
 Autor: ```Lucas Nerbutti```
